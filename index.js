@@ -71,9 +71,10 @@ const server = http.createServer((request, response) => {
 		contentType = 'image/png'
 		break;
 	  default:
+		break;
 	}//end switch pagename
-	switch(request.url) {
 	
+	switch(pagename) {
 	  default:
 		  if (files.includes(pagename.split("/")[1])) {
 			fs.readFile("/home/app"+pagename, function (err,data) {
