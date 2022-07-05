@@ -2,7 +2,7 @@
 //Title: Basic Webserver
 //Made by: Stephen Gillie
 //Created on: 6/17/2022
-//Updated on: 6/28/2022
+//Updated on: 7/5/2022
 //Notes: 
 
 const http = require("http");
@@ -72,8 +72,8 @@ const server = http.createServer((request, response) => {
 		break;
 	  default:
 	}//end switch pagename
-
 	switch(request.url) {
+	
 	  default:
 		  if (files.includes(pagename.split("/")[1])) {
 			fs.readFile("/home/app"+pagename, function (err,data) {
@@ -96,6 +96,7 @@ const server = http.createServer((request, response) => {
 	} // end switch pagename
 })
   
+
 server.listen((serverPort), () => {
-    console.log("Server is Running on port "+serverPort);
+	console.log("Server is Running on port "+serverPort);
 })
