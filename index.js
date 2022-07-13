@@ -13,6 +13,8 @@ const serverPort = 80;
 
 var error404 = "404 Not Found";
 var pagename = "/index.html";
+var optionsData = 'HTTP/1.1 200 OK\nAllow: GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS\nAccess-Control-Allow-Origin: https://Gilgamech.com\nAccess-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS\nAccess-Control-Allow-Headers: Content-Type'
+// Listing of files, to more safely check inputs.
 const files = fs.readdirSync("/home/app");
 
 fs.readFile("/home/app/custerr/404.htm", 'utf8', function (err,data) {
